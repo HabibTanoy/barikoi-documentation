@@ -56,7 +56,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">District Api</h1></header><article><div><span><h2></h2>
 <p><code>GET</code> District API</p>
-<pre><code class="hljs">http:<span class="hljs-regexp">//</span>barikoi.xyz<span class="hljs-regexp">/v1/</span>api<span class="hljs-regexp">/API_KEY/</span>districts?q=Dhaka
+<pre><code class="hljs">http:<span class="hljs-regexp">//</span>barikoi.xyz<span class="hljs-regexp">/v1/</span>api<span class="hljs-regexp">/API_KEY/</span>districts?q=Chittagong
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="api-params"></a><a href="#api-params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API PARAMS</h2>
 <table>
@@ -64,11 +64,11 @@
 <tr><th>Parameter</th><th style="text-align:center">Value</th></tr>
 </thead>
 <tbody>
-<tr><td>q</td><td style="text-align:center">Dhaka</td></tr>
+<tr><td>q</td><td style="text-align:center">Chittagong</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="district-api-request-example"></a><a href="#district-api-request-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>District API Request Example</h2>
-<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'http://barikoi.xyz/v1/api/API_KEY/districts?q=Dhaka'</span>)
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'http://barikoi.xyz/v1/api/API_KEY/districts?q=Chittagong'</span>)
     .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
     .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
     .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
@@ -77,8 +77,9 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"places"</span>: [
         {
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Dhaka"</span>,
-            <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [90.25076984261659, 23.786967628854974]}"</span>
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">9</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Chittagong"</span>,
+            <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [91.83436892134064, 22.44326446730346]}"</span>
         }
     ],
     <span class="hljs-attr">"status"</span>: <span class="hljs-number">200</span>
@@ -98,26 +99,32 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"places"</span>: [
         {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bagerhat"</span>,
             <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [89.73956431663846, 22.36977996795243]}"</span>
         },
         {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bandarban"</span>,
             <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [92.36382543114016, 21.80711701661792]}"</span>
         },
         {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">3</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Barguna"</span>,
-            <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [90.1204803599124, 22.141126582460394]}"</span>
+            <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [90.1204803599124, 22.14112658246039]}"</span>
         },
         {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">4</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Barisal"</span>,
-            <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [90.34167233806413, 22.811441437980033]}"</span>
+            <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [90.34167233806411, 22.811441437980033]}"</span>
         },
         {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">5</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bhola"</span>,
             <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [90.73334082882695, 22.335697321448272]}"</span>
         },
         {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">6</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bogra"</span>,
             <span class="hljs-attr">"center"</span>: <span class="hljs-string">"{\"type\": \"Point\", \"coordinates\": [89.37879178145258, 24.824458085035953]}"</span>
         }
