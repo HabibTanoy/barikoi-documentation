@@ -388,4 +388,96 @@
 }
 </code></pre>
 <p><code>For each request of Industrial Autocomplete API with all parameter 1 API call is counted.</code></p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/geo-code"><span class="arrow-prev">← </span><span>Geocoding</span></a><a class="docs-next button" href="/docs/nearby"><span>Nearby</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#method">Method</a></li><li><a href="#url">URL</a></li><li><a href="#api-params">API PARAMS</a></li><li><a href="#api-request-example">API Request Example</a></li><li><a href="#example-response">Example Response</a></li><li><a href="#autocomplete-filter-api">Autocomplete Filter API</a></li><li><a href="#url-1">URL</a></li><li><a href="#api-params-1">API PARAMS</a></li><li><a href="#api-request-example-1">API Request Example</a></li><li><a href="#example-response-1">Example Response</a></li><li><a href="#post-office-autocomplete-api">Post Office Autocomplete API</a></li><li><a href="#api-params-2">API Params</a></li><li><a href="#autocomplete-api-request-example">Autocomplete API Request Example</a></li><li><a href="#example-response-2">Example Response</a></li><li><a href="#industrial-autocomplete-api">Industrial Autocomplete API</a></li><li><a href="#api-params-3">API Params</a></li><li><a href="#autocomplete-api-request-example-1">Autocomplete API Request Example</a></li><li><a href="#example-response-3">Example Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2021 Barikoi Technologies Limited</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="bangla-autocomplete-api"></a><a href="#bangla-autocomplete-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bangla Autocomplete API</h2>
+<p><code>GET</code> Bangla Autocomplete API</p>
+<p>Barikoi Bangla Autocomplete API will return places holding place's id, longitude, latitude, address, address_bn, city, area, area_bn, postCode, pType &amp; uCode in response. Return bangla address and area along with others.</p>
+<h2><a class="anchor" aria-hidden="true" id="api-params-4"></a><a href="#api-params-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API Params</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th style="text-align:center">Value</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>q</td><td style="text-align:center">Nabisco</td><td>Required</td></tr>
+<tr><td>bangla</td><td style="text-align:center">true</td><td>Required</td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">"https://barikoi.xyz/v1/api/search/autocomplete/API_KEY/place?q=Nabisco&amp;bangla=true"</span>)
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+    .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="example-response-4"></a><a href="#example-response-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"places"</span>: [
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">481520</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.40127992630005"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.768977904449308"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Nabisco Biscuit And Bread Factory, House 77, Shahid Taj Uddin Ahmed Sharani"</span>,
+            <span class="hljs-attr">"address_bn"</span>: <span class="hljs-string">"নাবিস্কো বিসকুট এবং ব্রেড ফ্যাক্টরি, হাউস ৭৭, শহীদ তাজ উদ্দিন আহমেদ সরণী, তেজগাঁও"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Tejgaon"</span>,
+            <span class="hljs-attr">"area_bn"</span>: <span class="hljs-string">"তেজগাঁও"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1208</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Industry"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"MAPB0183"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">5620</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.40287181735039"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.769046635996364"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Nabisco Factory Outlet, House 77, Tejgaon Industrial Area"</span>,
+            <span class="hljs-attr">"address_bn"</span>: <span class="hljs-string">"নাবিস্কো ফ্যাক্টরি আউটলেট, হাউস ৭৭, তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, তেজগাঁও"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Tejgaon"</span>,
+            <span class="hljs-attr">"area_bn"</span>: <span class="hljs-string">"তেজগাঁও"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1208</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Industry"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"EAST9031"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">454399</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.40086954832078"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.769557207225198"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Nabisco Bus Stand, Shahid Tajuddin Ahmed Sarani"</span>,
+            <span class="hljs-attr">"address_bn"</span>: <span class="hljs-string">"নাবিস্কো বাস স্ট্যান্ড, শহীদ তাজউদ্দীন আহমেদ সরণী, তেজগাঁও"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Tejgaon"</span>,
+            <span class="hljs-attr">"area_bn"</span>: <span class="hljs-string">"তেজগাঁও"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1206</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Transportation"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"UQYN8554"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">5636</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.40298178792"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.768945072849267"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Nabisco Biscuit &amp; Bread Factory, House 77, Tejgaon Industrial Area"</span>,
+            <span class="hljs-attr">"address_bn"</span>: <span class="hljs-string">"নাবিস্কো বিসকুট  ব্রেড ফ্যাক্টরি, হাউস ৭৭, তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, তেজগাঁও"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Tejgaon"</span>,
+            <span class="hljs-attr">"area_bn"</span>: <span class="hljs-string">"তেজগাঁও"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1208</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Industry"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"AIMS0122"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">520780</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.40288068832194"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.768825794979612"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Nabisco Biscuit &amp; Bread Factory Limited, House 77, Tejgaon Industrial Area"</span>,
+            <span class="hljs-attr">"address_bn"</span>: <span class="hljs-string">"নাবিস্কো বিসকুট  ব্রেড ফ্যাক্টরি লিমিটেড, হাউস ৭৭, তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, তেজগাঁও"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Tejgaon"</span>,
+            <span class="hljs-attr">"area_bn"</span>: <span class="hljs-string">"তেজগাঁও"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1208</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Food"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"NIZR3380"</span>
+        },
+        ..............
+    ],
+    <span class="hljs-attr">"status"</span>: <span class="hljs-number">200</span>
+}
+</code></pre>
+<p><code>For each request of Bangla Autocomplete API with all parameter 1 API call is counted.</code></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/geo-code"><span class="arrow-prev">← </span><span>Geocoding</span></a><a class="docs-next button" href="/docs/nearby"><span>Nearby</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#method">Method</a></li><li><a href="#url">URL</a></li><li><a href="#api-params">API PARAMS</a></li><li><a href="#api-request-example">API Request Example</a></li><li><a href="#example-response">Example Response</a></li><li><a href="#autocomplete-filter-api">Autocomplete Filter API</a></li><li><a href="#url-1">URL</a></li><li><a href="#api-params-1">API PARAMS</a></li><li><a href="#api-request-example-1">API Request Example</a></li><li><a href="#example-response-1">Example Response</a></li><li><a href="#post-office-autocomplete-api">Post Office Autocomplete API</a></li><li><a href="#api-params-2">API Params</a></li><li><a href="#autocomplete-api-request-example">Autocomplete API Request Example</a></li><li><a href="#example-response-2">Example Response</a></li><li><a href="#industrial-autocomplete-api">Industrial Autocomplete API</a></li><li><a href="#api-params-3">API Params</a></li><li><a href="#autocomplete-api-request-example-1">Autocomplete API Request Example</a></li><li><a href="#example-response-3">Example Response</a></li><li><a href="#bangla-autocomplete-api">Bangla Autocomplete API</a></li><li><a href="#api-params-4">API Params</a></li><li><a href="#example-response-4">Example Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2021 Barikoi Technologies Limited</section></footer></div></body></html>
