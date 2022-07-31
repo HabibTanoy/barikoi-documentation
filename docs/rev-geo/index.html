@@ -56,7 +56,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Reverse Geocode</h1></header><article><div><span><h2></h2>
 <p><code>GET</code> Reverse Geocoding API</p>
-<pre><code class="hljs">https://barikoi.xyz/v1/api/<span class="hljs-keyword">search</span>/<span class="hljs-keyword">reverse</span>/API_KEY/geocode?longitude=<span class="hljs-number">90.36744611263278</span>&amp;latitude=<span class="hljs-number">23.81970957278533</span>&amp;district=<span class="hljs-keyword">true</span>&amp;post_code=<span class="hljs-keyword">true</span>&amp;country=<span class="hljs-keyword">true</span>&amp;sub_district=<span class="hljs-keyword">true</span>&amp;<span class="hljs-keyword">union</span>=<span class="hljs-keyword">true</span>&amp;pauroshova=<span class="hljs-keyword">true</span>&amp;location_type=<span class="hljs-keyword">true</span>&amp;division=<span class="hljs-keyword">true</span>&amp;address=<span class="hljs-keyword">true</span>&amp;area=<span class="hljs-keyword">true</span>
+<pre><code class="hljs">https://barikoi.xyz/v1/api/<span class="hljs-keyword">search</span>/<span class="hljs-keyword">reverse</span>/API_KEY/geocode?longitude=<span class="hljs-number">90.36744611263278</span>&amp;latitude=<span class="hljs-number">23.81970957278533</span>&amp;district=<span class="hljs-keyword">true</span>&amp;post_code=<span class="hljs-keyword">true</span>&amp;country=<span class="hljs-keyword">true</span>&amp;sub_district=<span class="hljs-keyword">true</span>&amp;<span class="hljs-keyword">union</span>=<span class="hljs-keyword">true</span>&amp;pauroshova=<span class="hljs-keyword">true</span>&amp;location_type=<span class="hljs-keyword">true</span>&amp;division=<span class="hljs-keyword">true</span>&amp;address=<span class="hljs-keyword">true</span>&amp;area=<span class="hljs-keyword">true</span>&amp;bangla=<span class="hljs-keyword">true</span>
 </code></pre>
 <p>This API initially returns id, address, area, city, distance_within_meters without any additional call.
 Valid additional parameters are:
@@ -78,9 +78,10 @@ Valid additional parameters are:
 <br></p></li>
 <li><p><code>division</code> : If division is set to true the division of the coresponding location will be provided with the response.
 <br></p></li>
-<li><p><code>address</code> : If address is set to true, API will return the details address componants of the base address line along with the basic response.
+<li><p><code>address</code> : If address is set to true, API will return the details address components of the base address line along with the basic response.
 <br></p></li>
-<li><p><code>area</code> : If area is set to true, it will return the details area componant like area, sub area of the location.</p></li>
+<li><p><code>area</code> : If area is set to true, it will return the details area components like area, sub area of the location.</p></li>
+<li><p><code>bangla</code> : If bangla is set to true, it will return address components in bangla.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="api-params"></a><a href="#api-params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API PARAMS</h2>
 <table>
@@ -100,12 +101,13 @@ Valid additional parameters are:
 <tr><td>division</td><td style="text-align:center">true</td><td></td></tr>
 <tr><td>address</td><td style="text-align:center">true</td><td></td></tr>
 <tr><td>area</td><td style="text-align:center">true</td><td></td></tr>
+<tr><td>bangla</td><td style="text-align:center">true</td><td></td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="rate-limit"></a><a href="#rate-limit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rate limit</h2>
 <p>2000 Request per minute</p>
 <h2><a class="anchor" aria-hidden="true" id="reverse-geocoding-api-request-example"></a><a href="#reverse-geocoding-api-request-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reverse Geocoding API Request Example</h2>
-<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'https://barikoi.xyz/v1/api/search/reverse/API_KEY/geocode?longitude=90.36744611263278&amp;latitude=23.81970957278533&amp;district=true&amp;post_code=true&amp;country=true&amp;sub_district=true&amp;union=true&amp;pauroshova=true&amp;location_type=true&amp;division=true&amp;address=true&amp;area=true'</span>)
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'https://barikoi.xyz/v1/api/search/reverse/API_KEY/geocode?longitude=90.36744611263278&amp;latitude=23.81970957278533&amp;district=true&amp;post_code=true&amp;country=true&amp;sub_district=true&amp;union=true&amp;pauroshova=true&amp;location_type=true&amp;division=true&amp;address=true&amp;area=true&amp;bangla=true'</span>)
     .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
     .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
     .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
@@ -119,6 +121,7 @@ Valid additional parameters are:
         <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Mirpur"</span>,
         <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
         <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1216</span>,
+        <span class="hljs-attr">"address_bn"</span>: <span class="hljs-string">"হাউজ ২০, এভিনিউ ৩, লেন ২৫, ব্লক ডি, সেকশন ১১, মিরপুর"</span>,
         <span class="hljs-attr">"location_type"</span>: <span class="hljs-string">"Urban"</span>,
         <span class="hljs-attr">"district"</span>: <span class="hljs-string">"Dhaka"</span>,
         <span class="hljs-attr">"country"</span>: <span class="hljs-string">"Bangladesh"</span>,
@@ -141,4 +144,4 @@ Valid additional parameters are:
 </code></pre>
 <p><code>For each request of Reverse Geocode with all parameter 11 API call is counted.</code></p>
 <p>Note: Any additional parameters with value <code>true</code> will be counted.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/intro"><span class="arrow-prev">← </span><span>Barikoi Places API</span></a><a class="docs-next button" href="/docs/geo-server"><span>Reverse Geocoding (Server)</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-params">API PARAMS</a></li><li><a href="#rate-limit">Rate limit</a></li><li><a href="#reverse-geocoding-api-request-example">Reverse Geocoding API Request Example</a></li><li><a href="#example-response">Example Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2021 Barikoi Technologies Limited</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/intro"><span class="arrow-prev">← </span><span>Barikoi Places API</span></a><a class="docs-next button" href="/docs/geo-server"><span>Reverse Geocoding (Server)</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-params">API PARAMS</a></li><li><a href="#rate-limit">Rate limit</a></li><li><a href="#reverse-geocoding-api-request-example">Reverse Geocoding API Request Example</a></li><li><a href="#example-response">Example Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2022 Barikoi Technologies Limited</section></footer></div></body></html>
